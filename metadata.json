@@ -1,0 +1,8 @@
+{
+  "name": "Jamaican Institute of Architects",
+  "description": "The official website of the Jamaican Institute of Architects (JIA), providing professional architectural guidelines, directories of elected officers, accredited CPD seminars, and an interactive waitlist registry for the upcoming Members' Portal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

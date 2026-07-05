@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jamaican Institute of Architects</title>
+    <script>
+      // Prevent "Cannot set property fetch of #<Window> which has only a getter" crashes in iframe sandbox environments
+      (function() {
+        try {
+          var originalFetch = window.fetch;
+          var currentFetch = originalFetch;
+          
+          // Try defining on window directly
+          Object.defineProperty(window, 'fetch', {
+            get: function() { return currentFetch; },
+            set: function(val) { currentFetch = val; },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e1) {
+          try {
+            // Fallback to Window.prototype if window itself is non-configurable
+            Object.defineProperty(Window.prototype, 'fetch', {
+              get: function() { return window.fetch; },
+              set: function(val) { /* ignore or handle */ },
+              configurable: true,
+              enumerable: true
+            });
+          } catch (e2) {
+            // If all else fails, override window object assignment behavior if possible
+            window.__defineSetter__ && window.__defineSetter__('fetch', function(val) {});
+          }
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
