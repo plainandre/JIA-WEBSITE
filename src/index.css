@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter Tight", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-jia-jewel: #138F34;
+  --color-jia-jewel-dark: #10782B;
+  --color-jia-jewel-light: #18B345;
+  
+  --color-jia-chateau: #43B65C;
+  --color-jia-chateau-dark: #39984E;
+  --color-jia-chateau-light: #54E97A;
+  
+  --color-jia-killarney: #436D45;
+  --color-jia-killarney-dark: #395B3A;
+  --color-jia-killarney-light: #53A55A;
+  
+  --color-jia-greenpea: #28723D;
+  --color-jia-greenpea-light: #36AD4C;
+  
+  --color-jia-salem: #108153;
+  --color-jia-salem-dark: #0D6D46;
+  --color-jia-salem-light: #13A16A;
+  
+  --color-jia-darkgreen: #16683A;
+  --color-jia-darkgreen-dark: #13572E;
+  --color-jia-darkgreen-light: #1AB147;
+  
+  --color-jia-olive: #8A9444;
+  --color-jia-olive-dark: #759B3A;
+  --color-jia-olive-light: #9FAA4E;
+}
+
+/* Custom global styles to enhance Apple-like smooth scroll and rendering */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #f5f5f7;
+  color: #1d1d1f;
+  overflow-x: hidden;
+}
+
+/* Apple-style custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
